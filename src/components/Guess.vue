@@ -72,7 +72,7 @@ setAnswers();
 </script>
 
 <template>
-    <div id="container" :style="{backgroundColor: realAnswer}">
+    <div id="app-container" :style="{backgroundColor: realAnswer}">
         <h2 id="title">COLOR GUESSER</h2>
         <div>
                 <button @click="checkColor(answers[0])">{{ answers[0] }}</button>
@@ -100,7 +100,7 @@ setAnswers();
         font-weight:bolder;
         margin-top:40px;
     }
-    #container{
+    #app-container{
         margin-left:-260px;
         padding-bottom:20%;
         width:100vw;
