@@ -74,7 +74,7 @@ setAnswers();
 <template>
     <div id="app-container" :style="{backgroundColor: realAnswer}">
         <h2 id="title">COLOR GUESSER</h2>
-        <div>
+        <div :style="{marginBottom: click ? '0' : '25vh'}">
                 <button @click="checkColor(answers[0])">{{ answers[0] }}</button>
                 <button @click="checkColor(answers[1])">{{ answers[1] }}</button>
                 <button @click="checkColor(answers[2])">{{ answers[2] }}</button>
@@ -89,39 +89,26 @@ setAnswers();
 
 
 <style scoped>
-
+    
     #answer-container{
         background-color: white;
-        width:10%;
         text-align: center;
         font-family: 'Courier New', monospace;
         border-radius:10px;
         font-size:20px;
         font-weight:bolder;
-        margin-top:40px;
+        padding-left:10px;
+        padding-right:10px;
+        margin-bottom:25vh;
     }
+    
     #app-container{
-        margin-left:-260px;
-        padding-bottom:20%;
-        width:100vw;
         height:100vh;
         display:grid;
         grid-template: 1fr / 1fr;
         place-items:center;
         position:block;
         overflow: hidden;
-    }
-
-    #coloBox, #button{
-        grid-column: 1 / 1;
-        grid-row: 1 / 1;
-    }
-
-    #colorBox{
-        z-index:2;
-        width:100px;
-        height:100px;
-        margin:auto;
     }
 
     button{
@@ -139,7 +126,6 @@ setAnswers();
         background-color: aliceblue;
         width:20%;
         text-align: center;
-        margin-bottom:-70px;
         border-radius: 50px;
     }
 </style>
